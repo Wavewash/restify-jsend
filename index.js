@@ -1,6 +1,6 @@
 
-var express = require('express');
-var res = express.response;
+var restify = require('restify');
+var res = restify.response;
 
 
 res.jsend = function(data) {
