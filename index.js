@@ -1,14 +1,13 @@
+var http = require('http');
+var Response = http.ServerResponse;
 
-var restify = require('restify');
-var res = restify.response;
 
-
-res.jsend = function(data) {
+Response.prototype.jsend = function(data) {
   this.send({status: 'success', data: data});
 }
 
 
-res.jfail = function(code, message) {
+Response.prototype.jfail = function(code, message) {
   if (code instanceof Error) {
     this.send({status: 'fail', code: code.name, message: code.message});
     return;
@@ -25,7 +24,7 @@ res.jfail = function(code, message) {
 }
 
 
-res.jerror = function(code, message) {
+Response.prototype.jerror = function(code, message) {
   if (code instanceof Error) {// allow us to pass in Error objects to simplify code elsewhere
     this.send({status: 'error', code: code.name, message: code.message});
     return;
