@@ -11,7 +11,7 @@ npm install wavewash/restify-jsend
 ## Use
 
 ```
-// require after you require express
+// require after you require restify
 require('restify-jsend');
 
 // in your route
@@ -42,3 +42,4 @@ function(res, req, next) {
 
 This library was forked from Sean Wesenberg's library &lt;wookets@gmail.com&gt; 
 https://github.com/wookets/express-jsend
+The meat of the code is the same but I changed stuff up so it works with restify. I never used it with express. This library has only been tested and used by myself in restify.
