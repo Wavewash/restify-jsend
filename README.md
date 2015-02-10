@@ -6,7 +6,7 @@ http://labs.omniti.com/labs/jsend
 
 ## Install
 
-npm install waveash/restify-jsend
+npm install wavewash/restify-jsend
 
 ## Use
 
